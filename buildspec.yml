@@ -10,9 +10,11 @@ phases:
     commands: 
 #       - dotnet lambda package-ci --s3-bucket net-template --output-template updated-packaged.json
 #       dotnet lambda package-ci --s3-bucket utility-s3 --output-template updated-serverless.template
+        - dotnet lambda package-ci --template serverless.template --s3-bucket bha-codebuild-deployment-artifacts --output-template updated-serverless.template.json
 artifacts:
   files: 
-    - packaged.json
+#     - packaged.json
+    -serverless.template.json
     
     
     

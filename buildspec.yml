@@ -2,6 +2,8 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+       .net: 4.7.2
     commands:
       - dotnet tool install -g Amazon.Lambda.Tools
   build:
@@ -10,3 +12,7 @@ phases:
 artifacts:
   files: 
     - packaged.json
+    
+    
+    
+    
